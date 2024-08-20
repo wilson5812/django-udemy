@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+},
 """
 DATABASES = {
     "default": {
@@ -98,33 +98,9 @@ DATABASES = {
         "NAME": "devsearch",
         "USER": "root",
         "PASSWORD": "DBroot123",
-        "HOST": "localhost",  # set in docker-compose.yml
+        "HOST": "10.122.167.218",  # set in docker-compose.yml
         "PORT": 5432,  # default postgres port
     },
-    "xr_manage": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "xr_manage",
-        "USER": "root",
-        "PASSWORD": "DBroot123",
-        "HOST": "localhost",  # set in docker-compose.yml
-        "PORT": 5432,  # default postgres port
-    },
-    "fpr_manage": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "fpr_manage",
-        "USER": "root",
-        "PASSWORD": "DBroot123",
-        "HOST": "localhost",  # set in docker-compose.yml
-        "PORT": 5432,  # default postgres port
-    },
-    "cx_manage": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "cx_manage",
-        "USER": "root",
-        "PASSWORD": "DBroot123",
-        "HOST": "localhost",  # set in docker-compose.yml
-        "PORT": 5432,  # default postgres port
-    }
 }
 
 # Password validation

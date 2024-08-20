@@ -19,6 +19,7 @@ class Project(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(primary_key=True, default=uuid.uuid4,
                           unique=True, editable=False)
+    test = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
@@ -48,3 +49,10 @@ class Tag(models.Model):
                           unique=True, editable=False)
     def __str__(self):
         return self.name
+
+class Comment(models.Model):
+    project = models.CharField(max_length=200)
+    body = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4,
+                          unique=True, editable=False)
