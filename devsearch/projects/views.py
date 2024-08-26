@@ -29,7 +29,7 @@ def projects(request):
         # msg = 'This is the Projects Page view'
         # context = {'message':msg, 'projects':projects_list}
     projects = Project.objects.all()
-    context = {'projects': projects}
+    context = {'projects': projects }
     return render(request, 'projects/projects.html', context)
 
 
