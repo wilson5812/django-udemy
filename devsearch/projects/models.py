@@ -3,7 +3,7 @@ from django.db import models
 from django.conf import settings
 from django.conf.urls.static import static
 
-# Create your models here.
+
 class Project(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
@@ -49,6 +49,7 @@ class Tag(models.Model):
                           unique=True, editable=False)
     def __str__(self):
         return self.name
+
 
 class Comment(models.Model):
     project = models.CharField(max_length=200)

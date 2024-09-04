@@ -4,5 +4,6 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    path('projects/', views.loans, name="loans"),
+    path('', views.loans, name="loans"),
+    path('create/', views.create_loans, name="create_loans"),
 ]

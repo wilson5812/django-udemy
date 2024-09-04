@@ -56,7 +56,7 @@ def create_project(request):
             return redirect('projects')
 
     context = { 'form': form }
-    return render(request, 'projects/project_form.html', context)
+    return render(request, 'forms.html', context)
 
 def update_project(request, primary_key):
 
@@ -70,7 +70,7 @@ def update_project(request, primary_key):
             return redirect('projects')
 
     context = { 'form': form }
-    return render(request, 'projects/project_form.html', context)
+    return render(request, 'forms.html', context)
 
 def delete_project(request, primary_key):
 
